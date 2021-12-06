@@ -1,6 +1,12 @@
 <script lang="ts">
 	import Navbar from "./partials/Navbar.svelte";
 	export let name: string;
+
+	async function is_auth(): Promise<boolean> {
+		let resp = await fetch("../backend/is_auth.php");
+		let user = await resp.json();
+		return user.is_auth;
+	}
 </script>
 
 <main>

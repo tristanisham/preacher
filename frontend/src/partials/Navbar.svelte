@@ -1,7 +1,6 @@
 <script lang="ts">
     export let site_title: string;
     // import createEventDispatcher from "svelte";
-
     let dropdown = false;
     let mobile_dropdown = false;
     function toggleDropdown() {
